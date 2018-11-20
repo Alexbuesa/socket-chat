@@ -3,7 +3,7 @@ var nombreUsuario = params.get('nombre');
 var sala = params.get('sala');
 
 // Referencias de jQuery
-var divUsuarios = $('#tituloSala');
+var divTituloSala = $('#divTituloSala');
 var divUsuarios = $('#divUsuarios');
 var formEnviar = $('#formEnviar');
 var txtMensaje = $('#txtMensaje');
@@ -17,8 +17,8 @@ var divChatbox = $('#divChatbox');
  * @param {*} personas 
  */
 function renderizarUsuarios(personas) {
-
-    console.log(personas);
+    var htmlTitulo = '<h3 class="box-title">Sala de chat <small>' + params.get('sala') + '</small></h3>'
+    divTituloSala.html(htmlTitulo);
 
     var html = '';
 
