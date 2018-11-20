@@ -64,7 +64,9 @@ function renderizarMensajes(mensaje, yo) {
             html += '    <div class="chat-img"><img src="assets/images/users/1.jpg" alt="user" /></div>';
         }
         html += '    <div class="chat-content">';
-        //html += '        <h5>' + mensaje.nombre + '</h5>';
+        if (mensaje.nombre !== 'Administrador') {
+            html += '        <h5>' + mensaje.nombre + '</h5>';
+        }
         html += '        <div class="box bg-light-' + adminClass + '">' + mensaje.mensaje + '</div>';
         html += '    </div>';
         html += '    <div class="chat-time">' + hora + '</div>';
